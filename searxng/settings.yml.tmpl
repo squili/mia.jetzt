@@ -1,0 +1,34 @@
+# this file has been censored
+
+use_default_settings: true
+
+general:
+  instance_name: Mia
+  enable_metrics: true
+
+search:
+  safe_search: 1
+  default_lang: "en-US"
+
+server:
+  port: 8080
+  bind_address: "::"
+  base_url: https://search.mia.jetzt
+  limiter: true
+  secret_key: "mNkrNtJDzj52U7ctvuERSbo482UTVB4b"
+  image_proxy: true
+  http_protocol_version: "1.1"
+  method: "GET"
+
+redis:
+  url: redis://:<password>@top1.nearest.of.mia-searxng-redis.internal:6379/0
+
+outgoing:
+  useragent_suffix: "admin/contact@mia.jetzt"
+
+enabled_plugins:
+  - 'Hash plugin'
+  - 'Search on category select'
+  - 'Self Informations'
+  - 'Tracker URL remover'
+  - 'Open Access DOI rewrite'

@@ -1,0 +1,4 @@
+/target
+/Cargo.lock
+/searxng/settings.yml
+/router.ron
