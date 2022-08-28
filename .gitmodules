@@ -1,0 +1,6 @@
+[submodule "site/bulma"]
+	path = site/bulma
+	url = https://github.com/jgthms/bulma
+[submodule "site/libadwaita"]
+	path = site/libadwaita
+	url = https://gitlab.gnome.org/GNOME/libadwaita.git

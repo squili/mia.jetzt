@@ -1,0 +1,35 @@
+{% extends "base.html" %} {% macro service(label, asset, link) %}
+<li>
+  <a class="button is-info" href="{{ link }}">
+    <span class="icon">
+      <figure class="image is-16x16">
+        <img src="/assets/{{ asset }}" />
+      </figure>
+    </span>
+    <p>{{ label }}</p>
+  </a>
+</li>
+{% endmacro %} {% block content %}
+<nav class="navbar">
+  <div class="navbar-end">
+    <div class="navbar-item">
+      <div class="buttons">
+        <a class="button is-primary" href="/login">Log in</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<section class="section">
+  <div class="container">
+    <div class="box">
+      <h1 class="title mb-2">Hi, I'm Mia</h1>
+      <p class="mb-1">I'm a software engineer specializing in Rust</p>
+      <p class="mb-1">I self-host a single service:</p>
+      <ul>
+        {{- self::service(label="SearXNG", asset="searxng.svg",
+        link="https://search.mia.jetzt") -}}
+      </ul>
+    </div>
+  </div>
+</section>
+{% endblock %}
